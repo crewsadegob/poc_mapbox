@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		0F89377824598BD60027196F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F89377624598BD60027196F /* Main.storyboard */; };
 		0F89377A24598BD80027196F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F89377924598BD80027196F /* Assets.xcassets */; };
 		0F89377D24598BD80027196F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F89377B24598BD80027196F /* LaunchScreen.storyboard */; };
+		9DA9A807B09D58FC30784E78 /* Pods_poc_mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 980215209EC6D63BF8C5E5A5 /* Pods_poc_mapbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		0F89377924598BD80027196F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F89377C24598BD80027196F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F89377E24598BD80027196F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16CE13A008165CE98631423B /* Pods-poc_mapbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poc_mapbox.release.xcconfig"; path = "Target Support Files/Pods-poc_mapbox/Pods-poc_mapbox.release.xcconfig"; sourceTree = "<group>"; };
+		1F7FD69F6A424B18C42A50E5 /* Pods-poc_mapbox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poc_mapbox.debug.xcconfig"; path = "Target Support Files/Pods-poc_mapbox/Pods-poc_mapbox.debug.xcconfig"; sourceTree = "<group>"; };
+		980215209EC6D63BF8C5E5A5 /* Pods_poc_mapbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_poc_mapbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DA9A807B09D58FC30784E78 /* Pods_poc_mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				0F89376F24598BD60027196F /* poc_mapbox */,
 				0F89376E24598BD60027196F /* Products */,
+				91A662A7DF1C2B8FF70E0E20 /* Frameworks */,
+				6E8EDBD3D077CAA1635E1EB0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = poc_mapbox;
 			sourceTree = "<group>";
 		};
+		6E8EDBD3D077CAA1635E1EB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F7FD69F6A424B18C42A50E5 /* Pods-poc_mapbox.debug.xcconfig */,
+				16CE13A008165CE98631423B /* Pods-poc_mapbox.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		91A662A7DF1C2B8FF70E0E20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				980215209EC6D63BF8C5E5A5 /* Pods_poc_mapbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F89378124598BD80027196F /* Build configuration list for PBXNativeTarget "poc_mapbox" */;
 			buildPhases = (
+				4B52937E6308CEBD96A103A9 /* [CP] Check Pods Manifest.lock */,
 				0F89376924598BD60027196F /* Sources */,
 				0F89376A24598BD60027196F /* Frameworks */,
 				0F89376B24598BD60027196F /* Resources */,
+				4F4ABC12B72F25F5899E9E53 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B52937E6308CEBD96A103A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-poc_mapbox-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F4ABC12B72F25F5899E9E53 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-poc_mapbox/Pods-poc_mapbox-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-poc_mapbox/Pods-poc_mapbox-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-poc_mapbox/Pods-poc_mapbox-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0F89376924598BD60027196F /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		0F89378224598BD80027196F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F7FD69F6A424B18C42A50E5 /* Pods-poc_mapbox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		0F89378324598BD80027196F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16CE13A008165CE98631423B /* Pods-poc_mapbox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

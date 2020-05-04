@@ -53,6 +53,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string></string>
+	<key>NSLocationWhenInUsageDescription</key>
+	<string>Shows your location on the map and helps improve the map</string>
+	<key>MGLMapboxAccessToken</key>
+	<string>sk.eyJ1IjoibG91YmF0aWVyIiwiYSI6ImNrOWw4MHhhNzAzanozbHBnM3V2dHg0Z2gifQ.O-T1bIMB7AdssIuBPHqZGw</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
